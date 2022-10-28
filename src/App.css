@@ -1,0 +1,156 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+#root {
+  width: 90%;
+  margin: auto;
+}
+.logo {
+  height: 6em;
+  will-change: filter;
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+input, button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #888;
+  font-size: 20px;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+button:active {
+  background-color: #d3d1d1;
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+button:disabled:active,
+button[disabled]:active{
+  background-color: #cccccc;
+}
+
+::-webkit-input-placeholder {
+  color: #b6b6b6;
+}
+:-moz-placeholder {
+  color: #b6b6b6;
+  opacity: 1;
+}
+::-moz-placeholder {
+  color: #b6b6b6;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  color: #b6b6b6;
+}
+::-ms-input-placeholder {
+  color: #b6b6b6;
+}
+
+::placeholder {
+  color: #b6b6b6;
+}
+
+.txt-danger {
+  color: red;
+}
+
+.preview {
+  height: 25em;
+  padding: 1.5em;
+  border-radius: 50px;
+}
+
+div label {
+  padding: 5px;
+}
+
+.btn-success {
+  color: white;
+  background: green;
+}
+
+.btn-large {
+  font-size: 30px;
+  width: calc(20% + 10px);
+}
+
+button:active {
+  background-color: #26c426;
+}
+
+select {
+  font-size: 18px;
+}
+
+.loading:after {
+  content: '';
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 6px;
+  border-radius: 10px;
+  background-image: linear-gradient(to right, darkred, #ea2020);
+  z-index: 2;
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: animate 1.5s infinite alternate;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(0) scaleX(0);
+    transform-origin: left;
+    left: 0;
+    right: auto;
+  }
+  45% {
+    transform: translateX(0) scaleX(1);
+    transform-origin: left;
+    left: 0;
+    right: auto;
+  }
+  50% {
+    transform: translateX(0) scaleX(1);
+    transform-origin: right;
+    left: auto;
+    right: 0;
+  }
+  100% {
+    transform: translateX(0) scaleX(0);
+    transform-origin: right;
+    left: auto;
+    right: 0;
+  }
+}
