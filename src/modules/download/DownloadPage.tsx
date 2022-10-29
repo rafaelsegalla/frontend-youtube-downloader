@@ -22,13 +22,13 @@ function DownloadPage() {
     const download = (url: string|null) => {
         setLoading(true);
         DownloadService.download(url)
-            .then(urlDownload => {
+            .then(result => {
                 var link = document.createElement("a");
-                link.setAttribute('download', "video.mp4");
-                link.href = urlDownload;
+                link.href = result.url;
                 document.body.appendChild(link);
                 link.click();
                 link.remove();
+                navigate(Paths.SUCCESS);
             })
             .catch(() => {
                 alert("Não foi possível realizar o download, tente novamente mais tarde");
@@ -40,13 +40,6 @@ function DownloadPage() {
     }
 
     return <div>
-        <label>
-            Selecione o formato do arquivo:
-        </label>
-        <select>
-            <option>MP3</option>
-            <option>MP4</option>
-        </select>
         <Preview url={url} />
         <div>
             <button disabled={loading} onClick={() => download(url)} className={"btn-success btn-large"}>Baixar</button>

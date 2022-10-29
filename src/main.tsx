@@ -9,6 +9,7 @@ import DownloadPage from "./modules/download/DownloadPage";
 import Header from "./modules/Header";
 import Loader from "./components/loader/Loader";
 import {LoaderContext} from "./components/loader/LoaderContext";
+import SuccessPage from "./modules/success/SuccessPage";
 
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
                     <Route path={Paths.HOME}>
                         <Route index element={<Home />} />
                         <Route path={Paths.DOWNLOAD} element={<DownloadPage />} />
+                        <Route path={Paths.SUCCESS} element={<SuccessPage />} />
                         <Route path="*" element={<NoPage />} />
                     </Route>
                 </Routes>

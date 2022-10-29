@@ -1,4 +1,5 @@
 export const Paths = {
     HOME: "/",
-    DOWNLOAD: "/download"
+    DOWNLOAD: "/download",
+    SUCCESS: "/success"
 }

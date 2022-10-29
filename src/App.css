@@ -104,7 +104,7 @@ div label {
   width: calc(20% + 10px);
 }
 
-button:active {
+.btn-success:active {
   background-color: #26c426;
 }
 
@@ -153,4 +153,11 @@ select {
     left: auto;
     right: 0;
   }
+}
+
+.success {
+  color: green;
+}
+.rounded {
+  border-radius: 15px;
 }
